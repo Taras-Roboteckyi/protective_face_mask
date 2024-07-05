@@ -3,5 +3,17 @@ body {
   span {
     color: red;
   }
-  background: url("@img/foto-girl.png");
+  background: url("@img/girl.png");
+}
+
+@media (max-width: 768px) {
+  span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: green;
+  }
 }
