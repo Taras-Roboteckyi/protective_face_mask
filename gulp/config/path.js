@@ -14,6 +14,7 @@ export const path = {
   }, // Папка з результатом програми
   src: {
     js: `${srcFolder}/js/app.js`,
+    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     scss: `${srcFolder}/scss/style.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`, //** - Провіряємо всі вкладені файли в папці files. *.* - Провіряємо усі файли з любим розширенням
