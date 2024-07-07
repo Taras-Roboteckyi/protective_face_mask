@@ -1,9 +1,9 @@
 body {
-  background: #000;
+  /* background: green; */
   span {
     color: red;
   }
-  background: url("@img/girl.jpg");
+  background: url("../img/girl.jpg");
 }
 
 @media (max-width: 768px) {
@@ -14,6 +14,6 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-color: green;
+    background-color: blue;
   }
 }
