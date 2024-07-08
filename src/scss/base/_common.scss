@@ -1,0 +1,50 @@
+/*-----Скидування стилів------*/
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+/*-------------Body--------------*/
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+  font-family: var(--main-font);
+  font-weight: normal;
+}
+
+/*-Обмеження контенту секцій-*/
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

@@ -1,0 +1,46 @@
+/*-- Секція"Чем мы занимаемся" --*/
+
+/*-----Секція"Чем мы занимаемся" для mobile-версії---*/
+@media screen and (max-width: 1199px) {
+  .presentation-work {
+    display: none;
+  }
+}
+
+/*-----Секція"Чем мы занимаемся" для desktop-версії---*/
+
+@media screen and (min-width: 1200px) {
+  .presentation-work {
+    padding-top: 0px;
+  }
+
+  .presentation-work__title {
+    margin-bottom: 50px;
+  }
+
+  .presentation-work__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .presentation-work__item {
+    position: relative;
+  }
+
+  .presentation-work__heading {
+    position: absolute;
+
+    width: 100%;
+    height: 70px;
+    left: 0px;
+    bottom: 0px;
+
+    padding-top: 27px;
+    @include font(14px, 700, 1.143);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    background: rgba(47, 48, 58, 0.8);
+  }
+}

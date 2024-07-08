@@ -1,0 +1,28 @@
+/*-Контейнер для обмеження контенту по ширині-*/
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*-Контейнер для обмеження контенту mobile-версії-*/
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/*-Контейнер для обмеження контенту tablet-версії-*/
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+/*-Контейнер для обмеження контенту desktop-версії-*/
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}

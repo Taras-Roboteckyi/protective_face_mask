@@ -1,0 +1,84 @@
+/*-- Унікальний контент сторінки --*/
+/*-- Головна секція сайту --*/
+
+/*-----Cекція hero для mobile версії---*/
+
+.hero {
+  max-width: 480px;
+  margin: 0px auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/mobile/bg-main.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #c4c4c4;
+}
+
+.hero__title {
+  max-width: 360px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  @include font(26px, 900, 1.616);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  screen and (min-resolution: 192dpi) and (min-width: 320px),
+  screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/mobile/bg-main@2x.jpg');
+  }
+}
+
+/*-----Cекція hero для tablet версії---*/
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/tablet/bg-main.jpg');
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/tablet/bg-main@2x.jpg');
+  }
+}
+
+/*-----Cекція hero для desktop-версії---*/
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/deckstope/bg-main.jpg');
+    background-size: 1600px 600px;
+  }
+  .hero__title {
+    max-width: 696px;
+    @include font(44px, 900, 1.37);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/deckstope/bg-main@2x.jpg');
+  }
+}

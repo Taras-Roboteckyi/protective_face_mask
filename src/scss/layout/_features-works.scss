@@ -1,0 +1,58 @@
+/*---------- Секція"Особенности" -------*/
+
+/*-----Секція"Особенности" для mobile-версії---*/
+.features-works__items:not(:last-child) {
+  margin-bottom: 30px;
+}
+/*-- Іконки секції"Особенности" --*/
+.features-works__container {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+}
+
+/*-- Контент секції "Особенности" --*/
+.features-works__title {
+  margin-bottom: 10px;
+  @include font(14px, 700, 1.143);
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.features-works__item {
+  @include font(14px, 400, 1.715);
+  letter-spacing: 0.03em;
+}
+
+/*-----Секція"Особенности" для tablet-версії---*/
+
+@media screen and (min-width: 768px) {
+  .features-works__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+  .features-works__items {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  .features-works__title {
+    text-align: start;
+  }
+}
+
+/*-----Секція"Особенности" для desktop-версії---*/
+
+@media screen and (min-width: 1200px) {
+  .features-works__items {
+    width: calc(100% / 4 - 30px);
+  }
+}
