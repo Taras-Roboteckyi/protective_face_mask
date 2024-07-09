@@ -2,18 +2,19 @@ import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
 export const images = async () => {
-  return app.gulp
-    .src(app.path.src.images)
-    .pipe(
-      app.plugins.plumber(
-        app.plugins.notify.onError({
-          title: "IMAGES",
-          message: "Error: <%= error.message %>",
-        })
+  return (
+    app.gulp
+      .src(app.path.src.images)
+      .pipe(
+        app.plugins.plumber(
+          app.plugins.notify.onError({
+            title: "IMAGES",
+            message: "Error: <%= error.message %>",
+          })
+        )
       )
-    )
-    .pipe(app.plugins.newer(app.path.build.images))
-    .pipe(webp())
+      .pipe(app.plugins.newer(app.path.build.images))
+      /* .pipe(webp())
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.gulp.src(app.path.src.images))
     .pipe(app.plugins.newer(app.path.build.images))
@@ -27,6 +28,7 @@ export const images = async () => {
     )
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.gulp.src(app.path.src.svg))
-    .pipe(app.gulp.dest(app.path.build.images))
-    .pipe(app.plugins.browserSync.stream());
+    .pipe(app.gulp.dest(app.path.build.images)) */
+      .pipe(app.plugins.browserSync.stream())
+  );
 };
