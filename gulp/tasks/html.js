@@ -4,18 +4,19 @@ import versionNumber from "gulp-version-number"; //Дозволяє створю
 
 //Створюємо функцію, щоб отримати файли html і перенести файли по заданому шляху
 export const html = () => {
-  return app.gulp
-    .src(app.path.src.html)
-    .pipe(
-      app.plugins.plumber(
-        app.plugins.notify.onError({
-          title: "HTML",
-          message: "Error: <%= error.message %>",
-        })
+  return (
+    app.gulp
+      .src(app.path.src.html)
+      .pipe(
+        app.plugins.plumber(
+          app.plugins.notify.onError({
+            title: "HTML",
+            message: "Error: <%= error.message %>",
+          })
+        )
       )
-    )
-    .pipe(fileInclude())
-    .pipe(app.plugins.replace(/@img\//g, "img/"))
+      .pipe(fileInclude())
+      /* .pipe(app.plugins.replace(/@img\//g, "img/"))
     .pipe(webpHtmlNosvg())
     .pipe(
       versionNumber({
@@ -29,7 +30,8 @@ export const html = () => {
           file: "gulp/version.json",
         },
       })
-    )
-    .pipe(app.gulp.dest(app.path.build.html))
-    .pipe(app.plugins.browserSync.stream());
+    ) */
+      .pipe(app.gulp.dest(app.path.build.html))
+      .pipe(app.plugins.browserSync.stream())
+  );
 };
