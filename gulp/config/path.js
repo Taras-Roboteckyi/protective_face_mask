@@ -2,8 +2,8 @@
 import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./dist`;
-const srcFolder = `./src`;
+const buildFolder = `dist`;
+const srcFolder = `src`;
 
 export const path = {
   build: {
@@ -19,7 +19,7 @@ export const path = {
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/main.scss`,
-    html: `${srcFolder}/*.html`,
+    html: `${srcFolder}/**/*.html`,
     files: `${srcFolder}/files/**/*.*`, //** - Провіряємо всі вкладені файли в папці files. *.* - Провіряємо усі файли з любим розширенням
   },
   watch: {
