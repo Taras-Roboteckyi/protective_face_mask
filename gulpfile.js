@@ -18,7 +18,7 @@ global.app = {
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
-import { server } from "./gulp/tasks/server.js";
+import { serv } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
@@ -43,7 +43,7 @@ const mainTasks = gulp.series(
 );
 
 //Побудова сценаріїв виконання задач
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, serv));
 
 //Виконання сценарію по замовчуванню
 gulp.task("default", dev);

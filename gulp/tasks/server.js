@@ -1,11 +1,14 @@
 import { notify } from "browser-sync";
+import browserSync from "browser-sync";
 
-export const server = (done) => {
-  app.plugins.browserSync.init({
+// Иніціалізація BrowserSync
+const server = browserSync.create();
+
+export const serv = (done) => {
+  server.init({
     server: {
-      baseDir: `${app.path.build.html}`, //Базова папка, з якої запускаєм файли
+      baseDir: "./dist",
     },
-    notify: false,
     port: 3000,
   });
   done();

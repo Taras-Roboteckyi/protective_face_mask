@@ -10,14 +10,14 @@ export const path = {
     js: `${buildFolder}/js/`,
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
-    images: `${buildFolder}/img/`,
+    images: `${buildFolder}/images/`,
     fonts: `${buildFolder}/fonts/`,
     files: `${buildFolder}/files/`,
   }, // Папка з результатом програми
   src: {
     js: `${srcFolder}/js/app.js`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-    svg: `${srcFolder}/img/**/*.svg`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
+    svg: `${srcFolder}/images/**/*.svg`,
     scss: `${srcFolder}/scss/main.scss`,
     html: `${srcFolder}/**/*.html`,
     files: `${srcFolder}/files/**/*.*`, //** - Провіряємо всі вкладені файли в папці files. *.* - Провіряємо усі файли з любим розширенням
