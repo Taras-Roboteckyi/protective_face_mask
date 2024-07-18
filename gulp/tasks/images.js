@@ -1,5 +1,6 @@
 import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
+import mozjpeg from "imagemin-mozjpeg";
 
 export const images = async () => {
   return (
@@ -19,16 +20,17 @@ export const images = async () => {
       .pipe(app.gulp.src(app.path.src.images))
       //.pipe(app.plugins.newer(app.path.build.images))
       /*   .pipe(
-        imagemin({
-          progressive: true,
-          svgoPlugins: [{ removeViewBox: false }],
-          interlaced: true,
-          optimizationLevel: 3, //0 to 7
-        })
+        imagemin([
+          mozjpeg({ quality: 75, progressive: true }),
+          imagemin.optipng({ optimizationLevel: 5 }),
+          imagemin.svgo({
+            plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+          }),
+        ])
       ) */
       // .pipe(app.gulp.dest(app.path.build.images))
       // .pipe(app.gulp.src(app.path.src.svg))
-      // .pipe(app.gulp.dest(app.path.build.images))
+      .pipe(app.gulp.dest(app.path.build.images))
       .pipe(app.plugins.browserSync.stream())
   );
 };

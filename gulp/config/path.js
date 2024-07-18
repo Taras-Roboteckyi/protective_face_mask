@@ -2,8 +2,8 @@
 import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `dist`;
-const srcFolder = `src`;
+const buildFolder = "./dist";
+const srcFolder = "./src";
 
 export const path = {
   build: {
@@ -26,7 +26,7 @@ export const path = {
     js: `${srcFolder}/js/**/*.js`,
     scss: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     files: `${srcFolder}/files/**/*.*`,
   }, //Дивиться за файлами з цього шляху
   clean: buildFolder,
