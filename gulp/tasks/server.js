@@ -4,7 +4,7 @@ import browserSync from "browser-sync";
 // Иніціалізація BrowserSync
 const server = browserSync.create();
 
-export const serv = (done) => {
+export const serve = (done) => {
   server.init({
     server: {
       baseDir: "./dist",

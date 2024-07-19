@@ -18,7 +18,7 @@ global.app = {
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
-import { serv } from "./gulp/tasks/server.js";
+import { serve } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
@@ -34,16 +34,22 @@ function watcher() {
 }
 
 //Послідовна обробка шрифтів
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+/* const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle); */
 
 //Основні задачі
-const mainTasks = gulp.series(
+/* const mainTasks = gulp.series(
   fonts,
   gulp.parallel(copy, html, scss, js, images)
-);
+); */
 
 //Побудова сценаріїв виконання задач
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, serv));
+/* const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, serv)); */
 
 //Виконання сценарію по замовчуванню
-gulp.task("default", dev);
+/* gulp.task("default", dev); */
+
+// Экспорт задач
+//const build = gulp.series(gulp.parallel(minifyHtml, optimizeImages));
+const watch = gulp.parallel(watcher, serve);
+
+export default gulp.series(/* build, */ watch);
