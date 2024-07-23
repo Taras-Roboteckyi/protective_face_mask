@@ -3,34 +3,32 @@ import imagemin from "gulp-imagemin";
 import mozjpeg from "imagemin-mozjpeg";
 
 export const images = async () => {
-  return (
-    app.gulp
-      .src(app.path.src.images)
-      .pipe(
-        app.plugins.plumber(
-          app.plugins.notify.onError({
-            title: "IMAGES",
-            message: "Error: <%= error.message %>",
-          })
-        )
+  return app.gulp
+    .src(app.path.src.images)
+    .pipe(
+      app.plugins.plumber(
+        app.plugins.notify.onError({
+          title: "IMAGES",
+          message: "Error: <%= error.message %>",
+        })
       )
-      .pipe(app.plugins.newer(app.path.build.images))
-      //.pipe(webp())
-      .pipe(app.gulp.dest(app.path.build.images))
-      .pipe(app.gulp.src(app.path.src.images))
-      //.pipe(app.plugins.newer(app.path.build.images))
-      /*   .pipe(
-        imagemin([
-          mozjpeg({ quality: 75, progressive: true }),
-          imagemin.optipng({ optimizationLevel: 5 }),
-          imagemin.svgo({
-            plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-          }),
-        ])
-      ) */
-      // .pipe(app.gulp.dest(app.path.build.images))
-      // .pipe(app.gulp.src(app.path.src.svg))
-      .pipe(app.gulp.dest(app.path.build.images))
-      .pipe(app.plugins.browserSync.stream())
-  );
+    )
+    .pipe(app.plugins.newer(app.path.build.images))
+    .pipe(webp())
+    .pipe(app.gulp.dest(app.path.build.images))
+    .pipe(app.gulp.src(app.path.src.images))
+    .pipe(app.plugins.newer(app.path.build.images))
+    .pipe(
+      imagemin([
+        mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        }),
+      ])
+    )
+    .pipe(app.gulp.dest(app.path.build.images))
+    .pipe(app.gulp.src(app.path.src.svg))
+    .pipe(app.gulp.dest(app.path.build.images))
+    .pipe(app.plugins.browserSync.stream());
 };
