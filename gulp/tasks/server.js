@@ -2,14 +2,15 @@ import { notify } from "browser-sync";
 import browserSync from "browser-sync";
 
 // Иніціалізація BrowserSync
-const server = browserSync.create();
+/* const server = browserSync.create(); */
 
 export const serve = (done) => {
-  server.init({
+  app.plugins.browserSync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: `${app.path.build.html}`,
     },
+    notify: false,
     port: 3000,
   });
-  done();
+  /* done(); */
 };
