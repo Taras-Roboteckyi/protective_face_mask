@@ -1,7 +1,7 @@
 import webpack from "webpack-stream";
 
 export const js = () => {
-  return app.gulp
+  /* return app.gulp
     .src(app.path.src.js, { sourcemaps: true })
     .pipe(
       app.plugins.plumber(
@@ -20,5 +20,31 @@ export const js = () => {
       })
     )
     .pipe(app.gulp.dest(app.path.build.js))
-    .pipe(app.plugins.browserSync.stream());
+    .pipe(app.plugins.browserSync.stream()); */
+
+  return app.gulp
+    .src(app.path.src.js)
+    .pipe(
+      webpack({
+        mode: "production",
+
+        entry: {
+          index: "./src/js/app.js",
+        },
+
+        output: {
+          filename: "[name].bundle.js",
+        },
+
+        module: {
+          rules: [
+            {
+              test: /\.css$/,
+              use: ["style-loader", "css-loader"],
+            },
+          ],
+        },
+      })
+    )
+    .pipe(app.gulp.dest("./dist/js"));
 };
