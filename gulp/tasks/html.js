@@ -5,8 +5,12 @@ import htmlmin from "gulp-htmlmin";
 
 //Створюємо функцію, щоб отримати файли html і перенести файли по заданому шляху
 export const html = () => {
-  return (
-    app.gulp
+  return app.gulp
+    .src("src/index.html")
+    .pipe(app.gulp.dest("dist"))
+    .pipe(connect.reload());
+
+  /* app.gulp
       .src(app.path.src.html)
       .pipe(
         app.plugins.plumber(
@@ -39,6 +43,5 @@ export const html = () => {
       )
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(app.gulp.dest(app.path.build.html))
-      .pipe(app.plugins.browserSync.stream())
-  );
+      .pipe(app.plugins.browserSync.stream()) */
 };

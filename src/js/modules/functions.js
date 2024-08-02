@@ -1,6 +1,6 @@
 //Перевірка підтримки webp, додавання класу webp або no-webp для HTML
 
-export function isWebp() {
+/* export function isWebp() {
   //Перевірка підтримки webp,
   function testWebP(callback) {
     let webP = new Image();
@@ -19,4 +19,4 @@ export function isWebp() {
   });
 
   console.log("first");
-}
+} */

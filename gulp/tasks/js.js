@@ -1,7 +1,16 @@
 import webpack from "webpack-stream";
 
+/* const gulp = require("gulp");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+const rename = require("gulp-rename"); */
+
+import concat from "gulp-concat";
+import GulpUglify from "gulp-uglify";
+import rename from "gulp-rename";
+
 export const js = () => {
-  return app.gulp
+  /* return app.gulp
     .src(app.path.src.js, { sourcemaps: true })
     .pipe(
       app.plugins.plumber(
@@ -20,5 +29,18 @@ export const js = () => {
       })
     )
     .pipe(app.gulp.dest(app.path.build.js))
-    .pipe(app.plugins.browserSync.stream());
+    .pipe(app.plugins.browserSync.stream()); */
+
+  return app.gulp
+    .src("./src/js/**/*.js") // Шлях до ваших JS-файлів
+    .pipe(concat("all.js")) // Об'єднання всіх JS-файлів в один
+    .on("end", () => console.log("Files concatenated"))
+    .pipe(app.gulp.dest("dist/js")) // Збереження об'єднаного файлу
+    .on("end", () => console.log("File saved to dist/js"))
+    .pipe(rename("all.min.js")) // Перейменування для мінімізованого файлу
+    .on("end", () => console.log("File renamed to all.min.js"))
+    .pipe(GulpUglify()) // Мінімізація JS-файлів
+    .on("end", () => console.log("File minified"))
+    .pipe(app.gulp.dest("dist/js")) // Збереження мінімізованого файлу
+    .on("end", () => console.log("Minified file saved to dist/js"));
 };
