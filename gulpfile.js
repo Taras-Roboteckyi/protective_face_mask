@@ -6,7 +6,7 @@ import { path } from "./gulp/config/path.js";
 
 //Імпорт загальних плагінів
 import { plugins } from "./gulp/config/plugins.js";
-
+import browserSync from "browser-sync";
 //Передаєм значення в глобальну змінну
 global.app = {
   path: path,
@@ -26,11 +26,11 @@ import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 
 //Спостережувальна функція за змінами в файлах
 function watcher() {
-  gulp.watch(path.watch.files, copy);
-  gulp.watch(path.watch.html, html);
-  gulp.watch(path.watch.scss, scss);
-  gulp.watch(path.watch.js, js);
-  gulp.watch(path.watch.images, images); //1 параметр - Вказуєм шлях за яким потрібно дивитися і другий параметр - дії які потрібно виконати
+  gulp.watch(path.watch.files, copy).on("change", browserSync.reload);
+  gulp.watch(path.watch.html, html).on("change", browserSync.reload);
+  gulp.watch(path.watch.scss, scss).on("change", browserSync.reload);
+  gulp.watch(path.watch.js, js).on("change", browserSync.reload);
+  gulp.watch(path.watch.images, images).on("change", browserSync.reload); //1 параметр - Вказуєм шлях за яким потрібно дивитися і другий параметр - дії які потрібно виконати
 }
 
 //Послідовна обробка шрифтів

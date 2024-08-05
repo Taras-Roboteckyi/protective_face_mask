@@ -3,3 +3,4 @@
 flsFunctions.isWebp(); */
 
 console.log("first");
+alert("qwerty");
