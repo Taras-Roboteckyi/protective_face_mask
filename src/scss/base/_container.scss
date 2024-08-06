@@ -1,8 +1,8 @@
 /*-Контейнер для обмеження контенту по ширині-*/
 .container {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
 }
 
 /*-Контейнер для обмеження контенту mobile-версії-*/
@@ -21,8 +21,8 @@
 }
 
 /*-Контейнер для обмеження контенту desktop-версії-*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1140px) {
   .container {
-    width: 1200px;
+    width: 1140px;
   }
 }
