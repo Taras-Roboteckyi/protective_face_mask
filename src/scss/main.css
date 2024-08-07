@@ -1,12 +1,14 @@
 @charset "UTF-8";
 /*-----CSS змінні------*/
 :root {
-  --primary-text-color: #212121;
-  --secondary-text-color: #757575;
-  --accent-color: #2196f3;
+  --primary-text-color: #0c122d;
+  --secondary-text-color: #575c74;
+  --accent-color: #ffb800;
+  --secondary-accent-color: #1b5fc1;
   --primary-white-color: #ffffff;
-  --main-font: 'Roboto', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
+  --background-color: #f7fdfb;
+  --main-font: "Rubik", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
 }
 
 /*-----Скидування стилів------*/
