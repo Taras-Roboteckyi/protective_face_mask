@@ -1,6 +1,6 @@
 //Перевірка підтримки webp, додавання класу webp або no-webp для HTML
 
-/* export function isWebp() {
+export function isWebp() {
   //Перевірка підтримки webp,
   function testWebP(callback) {
     let webP = new Image();
@@ -17,6 +17,4 @@
     let className = support === true ? "webp" : "no-webp";
     document.documentElement.classList.add(className);
   });
-
-  console.log("first");
-} */
+}
