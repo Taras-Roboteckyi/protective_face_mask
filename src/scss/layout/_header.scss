@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -14,15 +15,16 @@
 /*-Шапка сайту для tablet-версії-*/
 @media screen and (min-width: 768px) {
   .header-container {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 60px;
   }
 }
 
 /*-Шапка сайту для desktop-версії-*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1140px) {
   .header-container {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 80px;
   }
 }

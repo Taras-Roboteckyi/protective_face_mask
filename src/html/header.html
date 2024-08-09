@@ -3,65 +3,48 @@
   <div class="container header-container">
     <nav class="navigation">
       <!-- Логотип сайту -->
-      <a class="logo link animate__rotateOut" lang="en" href="./"
+      <a class="logo link" lang="en" href="./"
         ><span class="logo__item">FACE</span>MASK</a
       >
 
       <!-- Навігаційні посилання -->
-      <ul class="menu list">
-        <li class="menu__item">
-          <a class="menu__link link menu_link--current" href="./index.html"
-            >Студия</a
-          >
-        </li>
-        <li class="menu__item">
-          <a class="menu__link link" href="./portfolio.html">Портфолио</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link link" href="#">Контакты</a>
-        </li>
-      </ul>
+      <div class="navigation_container">
+        <ul class="menu list">
+          <li class="menu__item">
+            <a class="menu__link link menu_link--current" href="#">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Product</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Contact</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">History</a>
+          </li>
+        </ul>
+        <button class="menu navigation_button">Contact us</button>
+      </div>
     </nav>
 
     <!-- Кнопка бургер для mobile версії -->
     <button class="burger-btn" data-menu-open>
-      <!-- <svg class="burger-btn__icon" width="40" height="40">
+      <svg class="burger-btn__icon" width="40" height="40">
         <use href="images/sprite/sprite.svg#icon-menu_40px"></use>
-      </svg> -->
+      </svg>
     </button>
-
-    <ul class="contacts list">
-      <li class="contacts__item contacts__item--position">
-        <!-- Поштова скринька -->
-        <a class="contacts__link link" href="mailto:info@devstudio.com">
-          <!--   <svg class="contacts__icon" width="14" height="10">
-            <use href="images/sprite/sprite.svg#icon-envelope"></use>
-          </svg> -->
-          info@devstudio.com</a
-        >
-      </li>
-      <li class="contacts__item">
-        <!-- Телефонний номер -->
-        <a class="contacts__link link" href="tel:+380961111111">
-          <!-- <svg
-            class="contacts__icon contacts__icon--dimensions"
-            width="10"
-            height="14"
-          >
-            <use href="images/sprite/sprite.svg#icon-smartphone"></use></svg -->
-          >+38 096 111 11 11</a
-        >
-      </li>
-    </ul>
   </div>
 
   <!-- Контент для mobile версії (Бургер)-->
   <div class="mobile-menu" data-menu>
     <div class="container mobile-menu_container">
       <button class="close-btn mobile-menu_close-btn" data-menu-close>
-        <!--  <svg class="close-btn_icon" width="40" height="40">
+        <svg class="close-btn_icon" width="40" height="40">
           <use href="images/sprite/sprite.svg#icon-close_40px"></use>
-        </svg> -->
+        </svg>
       </button>
 
       <ul class="nav-list list">
@@ -69,35 +52,26 @@
           <a
             href="./index.html"
             class="nav-list_link link nav-list_link--current"
-            >Студия</a
+            >Home</a
           >
         </li>
         <li class="nav-list_item">
-          <a href="./portfolio.html" class="nav-list_link link">Портфолио</a>
+          <a href="#" class="nav-list_link link">About</a>
         </li>
         <li class="nav-list_item">
-          <a href="#" class="nav-list_link link">Контакты</a>
+          <a href="#" class="nav-list_link link">Product</a>
+        </li>
+        <li class="nav-list_item">
+          <a href="#" class="nav-list_link link">Contact</a>
+        </li>
+        <li class="nav-list_item">
+          <a href="#" class="nav-list_link link">History</a>
         </li>
       </ul>
 
-      <ul class="nav-list-contacts list">
-        <li class="nav-list-contacts_item">
-          <a
-            class="nav-list-contacts_link link nav-list-contacts_link--accent"
-            href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-        <li class="nav-list-contacts_item">
-          <a
-            class="nav-list-contacts_link link"
-            href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-      </ul>
+      <button class="navigation_button">Contact us</button>
 
-      <ul class="nav-list-social list">
+      <!--  <ul class="nav-list-social list">
         <li class="nav-list-social_item">
           <a href="#" class="nav-list-social_link link">Instagram</a>
         </li>
@@ -110,7 +84,7 @@
         <li class="nav-list-social_item">
           <a href="#" class="nav-list-social_link link">Linkedin</a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </header>
