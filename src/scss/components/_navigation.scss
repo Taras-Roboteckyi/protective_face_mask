@@ -16,7 +16,7 @@
   }
 
   .menu__item {
-    margin-right: 45px;
+    margin-right: 25px;
   }
   .menu__link {
     @include font(16px, 400, 0.3);
@@ -28,6 +28,7 @@
     &:hover,
     &:focus {
       color: var(--primary-text-color);
+      font-weight: 500;
     }
   }
 
@@ -47,5 +48,12 @@
       background-color: var(--accent-color);
       transform: translateY(32px);
     }
+  }
+}
+
+/*-----Навігаційні посилання для Desktop-версії---*/
+@media screen and (min-width: 1140px) {
+  .menu__item {
+    margin-right: 45px;
   }
 }

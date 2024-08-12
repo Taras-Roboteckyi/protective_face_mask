@@ -21,7 +21,7 @@
 
 @media screen and (min-width: 768px) {
   .logo {
-    margin-right: 88px;
+    /* margin-right: 88px; */
   }
 }
 
@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 1200px) {
   .logo {
-    margin-right: 93px;
+    /* margin-right: 93px; */
     @include font(26px, 700, 1.2);
   }
 }
