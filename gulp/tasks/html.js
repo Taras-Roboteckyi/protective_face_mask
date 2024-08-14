@@ -15,12 +15,7 @@ export const html = () => {
         })
       )
     )
-    .pipe(
-      fileInclude /* {
-        prefix: "@@",
-        basepath: "@file",
-      }) */()
-    )
+    .pipe(fileInclude())
     .pipe(app.plugins.replace(/@img\//g, "img/"))
     .pipe(webpHtmlNosvg())
     .pipe(

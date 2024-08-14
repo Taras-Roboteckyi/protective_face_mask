@@ -17,40 +17,10 @@
   color: var(--accent-color);
 }
 
-/*-----Логотип сайту для tablet-версії---*/
-
-@media screen and (min-width: 768px) {
-  .logo {
-    /* margin-right: 88px; */
-  }
-}
-
 /*-----Логотип сайту для desktpo-версії---*/
 
 @media screen and (min-width: 1200px) {
   .logo {
-    /* margin-right: 93px; */
     @include font(26px, 700, 1.2);
-  }
-}
-
-/*-- Логотип сайту (Підвал) --*/
-
-/*-----Логотип сайту (Підвал) для mobile-версії---*/
-.footer-logo {
-  @extend %logo;
-  display: block;
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--primary-white-color);
-
-  & .logo__item {
-    color: var(--accent-color);
-  }
-}
-/*-----Логотип сайту (Підвал) для desktop-версії---*/
-@media screen and (min-width: 1200px) {
-  .footer-logo {
-    text-align: start;
   }
 }

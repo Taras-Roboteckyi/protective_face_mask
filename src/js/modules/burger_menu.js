@@ -1,4 +1,4 @@
-/* (() => {
+export function Menu() {
   const refs = {
     openMenuBtn: document.querySelector("[data-menu-open]"),
     closeMenuBtn: document.querySelector("[data-menu-close]"),
@@ -11,4 +11,4 @@
   function toggleModal() {
     refs.menu.classList.toggle("is-open");
   }
-})(); */
+}

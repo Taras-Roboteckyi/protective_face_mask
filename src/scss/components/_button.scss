@@ -1,13 +1,13 @@
 /*-- Стилі для кнопки-- */
 @mixin button {
-  padding: 10px 32px;
+  padding: 9px 25px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 8px;
   border: none;
 
-  background: var(--accent-color);
-  font-family: inherit;
-  @include font(16px, 700, 1.88);
+  background: var(--secondary-accent-color);
+  font-family: Rubik;
+  @include font(14px, 500, 1.88);
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
@@ -15,7 +15,7 @@
   color: var(--primary-white-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*-- Стилі для кнопки в hero-- */
+/*-- Стилі для кнопки в navigation-- */
 .navigation_button {
   @include button;
 
